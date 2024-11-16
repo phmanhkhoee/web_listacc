@@ -18,13 +18,33 @@
 }
 
 /* Đảm bảo nội dung không bị tràn ngang */
-html, body {
+/*html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Tạo cấu trúc dọc */
-    overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu có */
+    flex-direction: column;
+    overflow-x: hidden;
+}*/
+
+/* Đặt ảnh nền mờ cho toàn bộ trang */
+body {
+    background-image: url('your-image.jpg'); /* Thay 'your-image.jpg' bằng đường dẫn ảnh của bạn */
+    background-size: cover; /* Ảnh phủ kín màn hình */
+    background-position: center; /* Căn giữa ảnh */
+    background-attachment: fixed; /* Ảnh không cuộn theo nội dung */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    filter: blur(5px); /* Làm mờ ảnh */
+    -webkit-filter: blur(5px); /* Hỗ trợ trên trình duyệt WebKit */
+}
+
+/* Để nội dung nổi lên trên nền */
+.wrapper {
+    position: relative; /* Giữ nội dung nổi trên ảnh nền */
+    z-index: 1; /* Đảm bảo nội dung nằm trên ảnh nền */
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng mờ để làm nổi bật nội dung */
+    padding: 20px; /* Khoảng cách nội dung */
+    border-radius: 10px; /* Bo góc nếu muốn */
 }
 
 .container {
