@@ -41,27 +41,28 @@ body {
 }
 
 .item-link {
-    padding: 8px 16px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap; /* Không cho chữ xuống dòng */
-    overflow: hidden; /* Ẩn phần chữ vượt ra ngoài */
-    text-overflow: ellipsis; /* Hiển thị "..." nếu chữ quá dài */
+    display: inline-block; /* Hiển thị như một khối */
+    background-color: #ff4747; /* Màu nền nút */
+    color: #ffffff; /* Màu chữ */
+    padding: 10px 20px; /* Khoảng cách trong nút */
+    margin: 5px; /* Khoảng cách giữa các nút */
+    border-radius: 20px; /* Bo tròn góc */
+    text-align: center; /* Căn giữa chữ */
+    text-transform: capitalize; /* Viết hoa chữ cái đầu */
+    font-size: 16px; /* Cỡ chữ */
+    cursor: pointer; /* Thêm hiệu ứng con trỏ */
+    transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
 }
 
 .item-link:hover {
-    background: red;
-    color: #fff;
+    background-color: #ff6b6b; /* Thay đổi màu nền khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
 }
 
-/* Khi được chọn */
+/* Đảm bảo nút được active hiển thị khác */
 .menu-active {
-    background-color: #ff5252;
-    color: white;
-    border: none;
+    background-color: #ff2626; /* Màu nền cho nút đang active */
+    font-weight: bold; /* Đậm chữ */
 }
 
 /* Bố cục mặc định (Desktop) */
