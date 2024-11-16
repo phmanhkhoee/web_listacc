@@ -27,15 +27,6 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Để nội dung nổi lên trên nền */
-.wrapper {
-    position: relative; /* Giữ nội dung nổi trên ảnh nền */
-    z-index: 1; /* Đảm bảo nội dung nằm trên ảnh nền */
-    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng mờ để làm nổi bật nội dung */
-    padding: 20px; /* Khoảng cách nội dung */
-    border-radius: 10px; /* Bo góc nếu muốn */
-}
-
 .container {
     max-width: 1200px; /* Giới hạn chiều rộng tối đa */
     width: 100%; /* Chiều rộng tự động co giãn */
