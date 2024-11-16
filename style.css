@@ -25,21 +25,11 @@ body, html {
     overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu có */
 }
 
-/*.container {
+.container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 16px;
-}*/
-
-/* CSS cho phần container bao quanh nội dung */
-.container {
-    display: grid;
-    place-items: center; /* Căn giữa cả ngang và dọc */
-    min-height: 100vh; /* Chiều cao của toàn bộ màn hình */
-    margin: 0;
-    padding: 0;
-    text-align: center;
 }
 
 .banner-img {
