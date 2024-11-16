@@ -27,13 +27,28 @@ html, body {
     overflow-x: hidden;
 }
 
+/*.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+}*/
+
 .container {
-    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
-    width: 100%; /* Chiều rộng tự động co giãn */
-    margin: 0 auto; /* Căn giữa */
-    padding: 16px; /* Thêm padding bên trong */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
+.banner-img img {
+    max-width: 100%;
+    height: auto;
+    width: 80%; /* Chỉnh độ rộng ảnh */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
 
 /* Nút lọc */
 .items-links {
