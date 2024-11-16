@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* .................Start Projects Section................... */
+
+#Projects {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+body .container {
+    max-width: 100%;
+    /* Chiếm toàn bộ chiều rộng */
+    margin: 0 auto;
+    /* Căn giữa */
+    padding: 0 10px;
+    /* Thêm khoảng cách hai bên */
+}
+
+.items-links {
+    width: 60%;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.item-link {
+    border: 2px solid red;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: .4s ease;
+}
+
+.item-link:hover {
+    background: red;
+    color: #fff;
+}
+
+.menu-active {
+    background: red;
+    color: #fff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-img {
+    width: 100%;
+    /* Chiếm toàn bộ chiều rộng cột */
+    aspect-ratio: 16 / 9;
+    /* Giữ tỷ lệ 16:9 */
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(175, 175, 175, 0.4);
+    animation: SclAnimation 0.4s ease;
+}
+
+@keyframes SclAnimation {
+    0% {
+        transform: scale(0);
+        /* Bắt đầu với kích thước 0 */
+    }
+    100% {
+        transform: scale(1);
+        /* Kết thúc với kích thước bình thường */
+    }
+}
+
+.project-img:hover .overlay {
+    top: 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(transparent, red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    transition: .4s ease;
+}
+
+.overlay h4 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.overlay p {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    width: 90%;
+}
+
+.action-aria {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    color: red;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: .4s ease;
+}
+
+.btn-light {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-light:hover {
+    background: #fff;
+    color: red;
+}
+
+.project-img:hover img {
+    transform: scale(1.1);
+}
+
+img {
+    width: 100%;
+    /* Chiếm toàn bộ chiều rộng khung chứa */
+    height: 100%;
+    /* Chiếm toàn bộ chiều cao khung chứa */
+    object-fit: cover;
+    /* Giữ tỷ lệ ảnh và làm đầy khung */
+    display: block;
+    transition: .4s ease;
+}
+
+.footer {
+    color: black;
+    /* Màu chữ (có thể thay đổi) */
+    text-align: center;
+    /* Căn giữa nội dung */
+    padding: 10px 0;
+    /* Thêm khoảng cách trên dưới */
+    font-size: 14px;
+    /* Kích thước chữ */
+    font-family: Arial, sans-serif;
+    /* Font chữ */
+    position: relative;
+    /* Giữ footer cố định ở dưới */
+}
+
+.footer p {
+    margin: 0;
+    /* Xóa khoảng cách mặc định */
+}
+
+
+/* .................End Projects Section.................... */
+
+
+/* .................Start Projects Section Media Scrin.................... */
+
+@media (max-width:1024px) {
+    .container {
+        width: 90%;
+    }
+    .items-links {
+        width: 90%;
+    }
+}
+
+@media (max-width: 991px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* Tự động chia cột */
+        gap: 20px;
+        /* Khoảng cách giữa các ảnh */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        /* Chuyển thành 1 cột trên màn hình rất nhỏ */
+        gap: 10px;
+    }
+}
+
+
+/* .................End Projects Section Media Scrin.................... */
