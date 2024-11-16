@@ -18,9 +18,12 @@
 }
 
 /* Đảm bảo nội dung không bị tràn ngang */
-body {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column; /* Tạo cấu trúc dọc */
     overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu có */
 }
 
@@ -29,6 +32,19 @@ body {
     width: 100%; /* Chiều rộng tự động co giãn */
     margin: 0 auto; /* Căn giữa */
     padding: 16px; /* Thêm padding bên trong */
+}
+
+/* Wrapper chứa toàn bộ nội dung */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Chiếm toàn bộ chiều cao màn hình */
+}
+
+/* Main tự động co giãn để đẩy footer xuống */
+main {
+    flex: 1;
+    padding: 20px;
 }
 
 /* Nút lọc */
@@ -50,6 +66,8 @@ body {
     cursor: pointer; /* Thêm hiệu ứng con trỏ */
     border-radius: 20px;  /* Bo tròn góc */
     text-align: center; /* Căn giữa chữ */
+    font-family: Arial, sans-serif; /* Hoặc font bạn muốn dùng */
+    white-space: nowrap; 
     transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
 }
 
