@@ -56,7 +56,7 @@ html, body {
     cursor: pointer; /* Thêm hiệu ứng con trỏ */
     border-radius: 20px;  /* Bo tròn góc */
     text-align: center; /* Căn giữa chữ */
-    font-family: Arial, sans-serif; /* Hoặc font bạn muốn dùng */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Hoặc font bạn muốn dùng */
     white-space: nowrap; 
     transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
 }
