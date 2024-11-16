@@ -57,6 +57,8 @@ main {
 }
 
 .item-link {
+    display: inline-block;
+    background-color: transparent; /* Nền trong suốt mặc định */
     border: 2px solid red;
     padding: 10px 20px; /* Khoảng cách trong nút */
     font-size: 16px; /* Cỡ chữ */
@@ -72,14 +74,16 @@ main {
 }
 
 .item-link:hover {
-    background-color: #ff6b6b; /* Thay đổi màu nền khi hover */
+    background-color: red; /* Nền đỏ */
+    color: white; /* Chữ trắng để tương phản */
     transform: scale(1.05); /* Phóng to nhẹ khi hover */
 }
 
-/* Đảm bảo nút được active hiển thị khác */
+/* Nút đang được chọn (menu-active) */
 .menu-active {
-    background-color: #ff2626; /* Màu nền cho nút đang active */
-    font-weight: bold; /* Đậm chữ */
+    background-color: red; /* Nền đỏ */
+    color: white; /* Chữ trắng để dễ đọc */
+    border: 2px solid red; /* Đồng màu với nền */
 }
 
 /* Bố cục mặc định (Desktop) */
