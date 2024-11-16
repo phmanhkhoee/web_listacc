@@ -44,7 +44,7 @@ body .container {
     /* Tùy chỉnh độ rộng ảnh (có thể điều chỉnh) */
     height: auto;
     /* Giữ nguyên tỉ lệ ảnh */
-    border-radius: 8px;
+    border-radius: 10px;
     /* Bo góc nếu cần */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Hiệu ứng đổ bóng */
@@ -53,13 +53,13 @@ body .container {
 .items-links {
     overflow-x: auto;
     width: 60%;
-    margin: 40px auto;
+    margin: 50px auto 30px auto;
     display: flex;
     flex-wrap: wrap;
     /* Đẩy nút xuống hàng khi không đủ chỗ */
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 .item-link {
@@ -288,6 +288,19 @@ img {
     .gallery {
         grid-template-columns: 1fr;
         /* Hiển thị 1 cột trên mobile */
+    }
+    .banner-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        /* Thêm khoảng cách bên dưới */
+    }
+    .banner-img img {
+        max-width: 90%;
+        /* Chiếm 90% màn hình trên mobile */
+        height: auto;
+        /* Giữ tỷ lệ */
     }
     .items-links {
         padding: 8px 4px;
