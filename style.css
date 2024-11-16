@@ -29,7 +29,7 @@
 
 /* Đặt ảnh nền mờ cho toàn bộ trang */
 body {
-    background-image: url('bannerprofile.png'); /* Thay 'your-image.jpg' bằng đường dẫn ảnh của bạn */
+    background-image: url('.img/bannerprofile.png'); /* Thay 'your-image.jpg' bằng đường dẫn ảnh của bạn */
     background-size: cover; /* Ảnh phủ kín màn hình */
     background-position: center; /* Căn giữa ảnh */
     background-attachment: fixed; /* Ảnh không cuộn theo nội dung */
