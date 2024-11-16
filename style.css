@@ -196,27 +196,6 @@ img {
     transition: .4s ease;
 }
 
-.footer {
-    color: black;
-    /* Màu chữ (có thể thay đổi) */
-    text-align: center;
-    /* Căn giữa nội dung */
-    padding: 10px 0;
-    /* Thêm khoảng cách trên dưới */
-    font-size: 14px;
-    /* Kích thước chữ */
-    font-family: Arial, sans-serif;
-    /* Font chữ */
-    position: relative;
-    /* Giữ footer cố định ở dưới */
-}
-
-.footer p {
-    margin: 0;
-    /* Xóa khoảng cách mặc định */
-}
-
-
 /* .................End Projects Section.................... */
 
 
