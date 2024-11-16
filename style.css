@@ -32,11 +32,14 @@ body, html {
     padding: 16px;
 }*/
 
+/* CSS cho phần container bao quanh nội dung */
 .container {
-    max-width: 1200px; /* Đặt chiều rộng tối đa */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-    margin: 0 auto; /* Căn giữa nội dung */
-    padding: 0 16px; /* Padding trong nếu cần */
+    display: grid;
+    place-items: center; /* Căn giữa cả ngang và dọc */
+    min-height: 100vh; /* Chiều cao của toàn bộ màn hình */
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .banner-img {
@@ -58,6 +61,7 @@ body, html {
 
 /* Nút lọc */
 .items-links {
+    overflow-x: auto
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* Đẩy nút xuống hàng khi không đủ chỗ */
@@ -96,17 +100,20 @@ body, html {
 
 /* Bố cục mặc định (Desktop) */
 /* Đảm bảo hình ảnh hoặc nội dung không bị tràn */
+/* Đảm bảo lưới ảnh dàn đều toàn bộ chiều rộng website */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cột tự động theo chiều rộng */
-    gap: 16px; /* Khoảng cách giữa các ảnh */
-    padding: 0; /* Loại padding thừa */
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr)); /* Mỗi cột chiếm toàn bộ không gian */
+    gap: 0; /* Xóa khoảng cách giữa các ảnh */
+    width: 100%; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa nếu cần */
+    padding: 0; /* Xóa padding */
 }
+
+/* Đảm bảo mỗi ảnh chiếm toàn bộ không gian lưới */
 .project-img {
-    width: 100%;
-    /* Chiếm toàn bộ chiều rộng cột */
-    aspect-ratio: 16 / 9;
-    /* Giữ tỷ lệ 16:9 */
+    width: 100%; /* Chiếm 100% chiều rộng cột */
+    aspect-ratio: 16/9; /* Giữ tỉ lệ 16:9 cho ảnh */
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -114,11 +121,11 @@ body, html {
     animation: SclAnimation 0.4s ease;
 }
 
-/* Hình ảnh bên trong */
+/* Đảm bảo hình ảnh vừa khung và dàn đều */
 .project-img img {
-    width: 100%; /* Hình ảnh tự điều chỉnh */
-    height: auto;
-    border-radius: 8px; /* Góc bo tròn */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh không méo, phủ đầy khung */
     display: block;
 }
 
