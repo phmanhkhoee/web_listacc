@@ -76,7 +76,6 @@ main {
 .item-link:hover {
     background-color: red; /* Nền đỏ */
     color: white; /* Chữ trắng để tương phản */
-    transform: scale(1.05); /* Phóng to nhẹ khi hover */
 }
 
 /* Nút đang được chọn (menu-active) */
