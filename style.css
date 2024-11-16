@@ -41,13 +41,20 @@ html, body {
     text-align: center;
 }
 
+.banner-img {
+    display: flex; /* Sử dụng Flexbox để căn giữa */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc nếu cần */
+    padding: 20px 0; /* Thêm khoảng cách trên dưới nếu cần */
+    text-align: center; /* Đảm bảo căn giữa text */
+}
+
 .banner-img img {
-    max-width: 100%;
-    height: auto;
-    width: 80%; /* Chỉnh độ rộng ảnh */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
+    max-width: 100%; /* Ảnh không vượt quá container */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    width: 80%; /* Điều chỉnh độ rộng ảnh */
+    border-radius: 8px; /* Bo góc nếu cần */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
 }
 
 /* Nút lọc */
