@@ -1,10 +1,12 @@
-* {
+/* Áp dụng box-sizing cho toàn bộ trang */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 /* .................Start Projects Section................... */
 
@@ -15,13 +17,18 @@
     padding: 30px 0;
 }
 
-body .container {
-    max-width: 100%;
-    /* Chiếm toàn bộ chiều rộng */
-    margin: 0 auto;
-    /* Căn giữa */
-    padding: 0 10px;
-    /* Thêm khoảng cách hai bên */
+/* Đảm bảo nội dung không bị tràn ngang */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu có */
+}
+
+.container {
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    width: 100%; /* Chiều rộng tự động co giãn */
+    margin: 0 auto; /* Căn giữa */
+    padding: 16px; /* Thêm padding bên trong */
 }
 
 /* Nút lọc */
@@ -30,7 +37,7 @@ body .container {
     justify-content: center;
     flex-wrap: wrap; /* Đẩy nút xuống hàng khi không đủ chỗ */
     gap: 8px;
-    margin: 16px 0;
+    padding: 8px; /* Thêm padding để nút không sát mép màn hình */
 }
 
 .item-link {
@@ -40,6 +47,9 @@ body .container {
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
+    white-space: nowrap; /* Không cho chữ xuống dòng */
+    overflow: hidden; /* Ẩn phần chữ vượt ra ngoài */
+    text-overflow: ellipsis; /* Hiển thị "..." nếu chữ quá dài */
 }
 
 .item-link:hover {
@@ -55,11 +65,12 @@ body .container {
 }
 
 /* Bố cục mặc định (Desktop) */
+/* Đảm bảo hình ảnh hoặc nội dung không bị tràn */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cột trên màn hình lớn */
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    padding: 16px;
+    padding: 16px; /* Thêm padding cho gallery */
 }
 
 .project-img {
@@ -224,7 +235,7 @@ img {
 /* Tablet (Màn hình vừa) */
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 cột trên tablet */
+        grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột trên tablet */
     }
     .item-link {
         font-size: 13px;
@@ -234,11 +245,11 @@ img {
 /* Mobile (Màn hình nhỏ) */
 @media (max-width: 480px) {
     .gallery {
-        grid-template-columns: 1fr; /* 1 cột trên điện thoại */
+        grid-template-columns: 1fr; /* Hiển thị 1 cột trên mobile */
     }
-    .item-link {
-        font-size: 12px;
-        padding: 6px 12px;
+
+    .items-links {
+        padding: 8px 4px; /* Giảm padding cho nút lọc trên mobile */
     }
 }
 
