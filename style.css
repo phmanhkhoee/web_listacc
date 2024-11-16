@@ -34,18 +34,6 @@ html, body {
     padding: 16px; /* Thêm padding bên trong */
 }
 
-/* Wrapper chứa toàn bộ nội dung */
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%; /* Chiếm toàn bộ chiều cao màn hình */
-}
-
-/* Main tự động co giãn để đẩy footer xuống */
-main {
-    flex: 1;
-    padding: 20px;
-}
 
 /* Nút lọc */
 .items-links {
