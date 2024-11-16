@@ -24,24 +24,22 @@ body .container {
     /* Thêm khoảng cách hai bên */
 }
 
+/* Nút lọc */
 .items-links {
-    width: 60%;
-    margin: 40px auto;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 40px;
+    flex-wrap: wrap; /* Đẩy nút xuống hàng khi không đủ chỗ */
+    gap: 8px;
+    margin: 16px 0;
 }
 
 .item-link {
-    border: 2px solid red;
-    padding: 10px 30px;
-    font-size: 15px;
-    font-weight: 500;
-    color: red;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 30px;
-    transition: .4s ease;
+    text-align: center;
 }
 
 .item-link:hover {
@@ -49,15 +47,19 @@ body .container {
     color: #fff;
 }
 
+/* Khi được chọn */
 .menu-active {
-    background: red;
-    color: #fff;
+    background-color: #ff5252;
+    color: white;
+    border: none;
 }
 
+/* Bố cục mặc định (Desktop) */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột trên màn hình lớn */
+    gap: 16px;
+    padding: 16px;
 }
 
 .project-img {
@@ -70,6 +72,14 @@ body .container {
     overflow: hidden;
     box-shadow: 0 0 4px rgba(175, 175, 175, 0.4);
     animation: SclAnimation 0.4s ease;
+}
+
+/* Hình ảnh bên trong */
+.project-img img {
+    width: 100%; /* Hình ảnh tự điều chỉnh */
+    height: auto;
+    border-radius: 8px; /* Góc bo tròn */
+    display: block;
 }
 
 @keyframes SclAnimation {
@@ -211,13 +221,25 @@ img {
     }
 }
 
-@media (max-width: 600px) {
+/* Tablet (Màn hình vừa) */
+@media (max-width: 768px) {
     .gallery {
-        grid-template-columns: 1fr;
-        /* Chuyển thành 1 cột trên màn hình rất nhỏ */
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr); /* 2 cột trên tablet */
+    }
+    .item-link {
+        font-size: 13px;
     }
 }
 
+/* Mobile (Màn hình nhỏ) */
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 cột trên điện thoại */
+    }
+    .item-link {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
 
 /* .................End Projects Section Media Scrin.................... */
