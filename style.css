@@ -41,16 +41,15 @@ body {
 }
 
 .item-link {
-    display: inline-block; /* Hiển thị như một khối */
-    background-color: #ff4747; /* Màu nền nút */
-    color: #ffffff; /* Màu chữ */
+    border: 2px solid red;
     padding: 10px 20px; /* Khoảng cách trong nút */
-    margin: 5px; /* Khoảng cách giữa các nút */
-    border-radius: 20px; /* Bo tròn góc */
-    text-align: center; /* Căn giữa chữ */
-    text-transform: capitalize; /* Viết hoa chữ cái đầu */
     font-size: 16px; /* Cỡ chữ */
+    margin: 5px; /* Khoảng cách giữa các nút */
+    font-weight: 500;
+    color: red;
     cursor: pointer; /* Thêm hiệu ứng con trỏ */
+    border-radius: 20px;  /* Bo tròn góc */
+    text-align: center; /* Căn giữa chữ */
     transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
 }
 
